@@ -67,8 +67,13 @@ export interface CanvasNode extends Node<NodeData> {
   style?: React.CSSProperties;
 }
 
-// Custom edge with additional properties
-export interface CanvasEdge extends Edge {
+// Custom edge with additional properties  
+export interface CanvasEdge {
+  id: string;
+  source: string;
+  target: string;
+  sourceHandle?: string | null;
+  targetHandle?: string | null;
   label?: string;
   style?: React.CSSProperties;
   isAISuggested?: boolean;

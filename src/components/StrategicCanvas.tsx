@@ -77,7 +77,7 @@ const StrategicCanvas: React.FC = () => {
 
   // Handle selection change
   const onSelectionChange = useCallback(
-    ({ nodes, edges }) => {
+    ({ nodes, edges }: { nodes: any[], edges: any[] }) => {
       setSelectedElements(
         nodes as CanvasNode[],
         edges as CanvasEdge[]
@@ -88,7 +88,7 @@ const StrategicCanvas: React.FC = () => {
 
   // Handle viewport change
   const onMove = useCallback(
-    (_, viewport) => {
+    (_: any, viewport: any) => {
       updateViewport(viewport.x, viewport.y, viewport.zoom);
     },
     [updateViewport]
